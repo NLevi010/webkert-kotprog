@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webkert-kotprog-16625": {
+      "hosting": {
+        "kotprog": [
+          "webkert-kotprog-16625"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webkert-kotprog-16625"
+  }
+}

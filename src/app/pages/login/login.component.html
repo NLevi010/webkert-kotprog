@@ -1,0 +1,26 @@
+<span *ngIf="loading" class="loading-spinner">
+  <mat-spinner></mat-spinner>
+</span>
+
+<div class="card-container">
+  <mat-card>
+    <mat-card-title>
+      Bejelentkezés
+    </mat-card-title>
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label for="email">Email</mat-label>
+          <input matInput type="email" formControlName="email"/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="pass">Jelszó</mat-label>
+          <input matInput type="password" formControlName="pass" />
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" class="accent-button" type="submit">Belépés</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,28 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu (selectedPage)="changePage($event)" (onCloseSidenav)="onClose($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout()">
+    </app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="menu-label" routerLink="/main">Mobil előfizetés</div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <li><a routerLink="/main">Főoldal</a></li>
+          <li><a routerLink="/plans">Csomagok</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/profile">Profil</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/subscriptions">Saját előfizetések</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/login" (click)="logout()">Kijelentkezés</a></li>
+          <li *ngIf="!loggedInUser"><a routerLink="/login">Bejelentkezés</a></li>
+          <li *ngIf="!loggedInUser"><a routerLink="/register">Regisztráció</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
