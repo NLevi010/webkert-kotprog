@@ -1,7 +1,5 @@
 # Web-development-frameworks project
 
-[Oldal](https://webkert-mobilcsomag.web.app/main)
-
-### Segítség javításhoz
+[Oldal](https://webkert-kotprog-16625.web.app/main//main)
 - Repository clone-ozása után *npm install*
-- Minden file megvan, nem kell environments-el sem bajlódni
+
